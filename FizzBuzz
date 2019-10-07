@@ -1,0 +1,15 @@
+for number in 1...100
+{
+    if number % 3 == 0 && number % 5 == 0 { // it is a multiple of 3
+        print("FizzBuzz")
+    } else if number % 3 == 0 && number % 5 != 0 {
+        print("Fizz")
+    } else if number % 7  == 0 && number % 3 != 0 && number % 5 != 0{
+        print("Bang")
+    } else if number % 3 == 0 && number % 5 == 0 && number % 7 == 0 {
+        print("FizzBuzzBang")
+    } else if number % 5 == 0 && number % 3 != 0 && number % 7 != 0{
+        print("Buzz")
+    } else {
+        print(number)
+    }
