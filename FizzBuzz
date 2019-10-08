@@ -1,0 +1,47 @@
+import UIKit
+
+
+class ViewController: UIViewController {
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet  var enterButton: UIButton!
+    
+    
+    @IBOutlet weak var newNum: UILabel!
+    
+    @IBAction func buttonAfter(_ sender: Any) {
+        let numb = Int(textField.text!)
+        newNum.text = fizzBuzz(num: numb!)
+    }
+    func fizzBuzz(num: Int) -> String{
+        var answer = " "
+        for number in 1...num {
+            if number % 3 == 0 && number % 5 == 0 { // it is a multiple of 3
+              answer += "FizzBuzz,"
+              } else if number % 3 == 0  {
+              answer += "Fizz,"
+              } else if number % 7  == 0 {
+              answer += "Bang,"
+              } else if number % 3 == 0 && number % 5 == 0 && number % 7 == 0 {
+              answer += "FizzBuzzBang,"
+              } else if number % 5 == 0 {
+              answer += "Buzz,"
+              } else {
+              answer += String(number) + ","
+              }
+}
+return answer
+
+}
+}
