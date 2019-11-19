@@ -19,9 +19,11 @@ struct Game{
     }
     var formattedWord: String{
         var guessedWord = ""
+        var totalPoints = 0
         for letter in word {
             if guessedLetters.contains(letter){
                 guessedWord += "\(letter)"
+                totalPoints += 1
             }else{
                 guessedWord += "_"
             }
