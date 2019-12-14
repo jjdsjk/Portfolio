@@ -1,90 +1,32 @@
 import UIKit
-
-
-
 class ViewController: UIViewController {
-    
-    
-    
     var lightOn = true
     var junButton = true
-    
     @IBOutlet weak var buttonChange: UIButton!
-    
-    
-    
     override func viewDidLoad() {
-        
         super.viewDidLoad()
-        
         updateUI()
-        
         // Do any additional setup after loading the view, typically from a nib.
-        
     }
-    
-    
-    
     @IBAction func buttonPressed(_ sender: Any) {
-        
         updateUI()
-        
         lightOn = !lightOn
-        
     }
-    
-    
-    
     func updateUI (){
-        
         if lightOn {
-            
             view.backgroundColor = .white
-            
-            
-            
-            
-            
-        } else {
-            
-            view.backgroundColor = .black
-            
-            
-            
-            
-            
+        }else{
+            view.backgroundColor = .black  
         }}
     @IBAction func junbuttonPressed(_ sender: Any) {
-        
         updateUITwo()
-        
         junButton = !junButton
-        
     }
         func updateUITwo (){
-            
             if junButton {
-                
                 view.backgroundColor = .white
-                
-                
-                
-                
-                
             } else {
-                
                 view.backgroundColor = .orange
-                
-                
-                
-                
-                
             }
-        
-        
-        
     }
-    
-    
-    
 }
